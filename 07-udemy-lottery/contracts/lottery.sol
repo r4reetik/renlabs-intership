@@ -10,6 +10,10 @@ contract Lottery {
         manager = msg.sender;
     }
 
+    function getPlayers() public view returns (address[] memory) {
+        return players;
+    }
+
     function lotteryEntry() public payable {
         require(
             msg.value >= 0.001 ether,
