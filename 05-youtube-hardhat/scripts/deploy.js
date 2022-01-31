@@ -13,8 +13,8 @@ const main = async () => {
 
     const data = {
         address: token.address,
-        abi: JSON.parse(token.interface.format("json"))
-    }
+        abi: JSON.parse(token.interface.format("json")),
+    };
     fs.writeFileSync("dev/contract.json", JSON.stringify(data));
 };
 
